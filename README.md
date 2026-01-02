@@ -16,3 +16,7 @@ TeamFlow is a mini task management web app built to practice real-world Git work
 - main branch for stable code
 - feature branches for development
 - frequent commits
+
+## Features
+- Add tasks
+- Move tasks between Todo, In Progress, Done

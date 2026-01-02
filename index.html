@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <h1>TeamFlow</h1>
 
   <div class="task-input">
@@ -14,10 +13,24 @@
     <button id="addTaskBtn">Add Task</button>
   </div>
 
-  <ul id="taskList"></ul>
+  <div class="board">
+    <div class="col">
+      <h2>Todo</h2>
+      <ul id="todoList"></ul>
+    </div>
 
+    <div class="col">
+      <h2>In Progress</h2>
+      <ul id="progressList"></ul>
+    </div>
 
+    <div class="col">
+      <h2>Done</h2>
+      <ul id="doneList"></ul>
+    </div>
+  </div>
 
   <script src="script.js"></script>
+
 </body>
 </html>

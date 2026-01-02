@@ -43,9 +43,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const toDoneBtn = document.createElement("button");
     toDoneBtn.textContent = "Done";
-
+    
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    
     actions.appendChild(toProgressBtn);
     actions.appendChild(toDoneBtn);
+    actions.appendChild(deleteBtn);
 
     li.appendChild(title);
     li.appendChild(actions);
@@ -57,6 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toDoneBtn.addEventListener("click", () => {
       doneList.appendChild(li);
+      updateCounts();
+    });
+    
+    deleteBtn.addEventListener("click", () => {
+      li.remove();
       updateCounts();
     });
 

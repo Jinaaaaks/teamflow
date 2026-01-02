@@ -149,3 +149,11 @@ li {
 .task-title {
   font-weight: 600;
 }
+.task-actions button:last-child {
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.task-actions button:last-child:hover {
+  border-color: rgba(239, 68, 68, 0.7);
+}
+

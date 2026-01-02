@@ -1,16 +1,20 @@
 :root {
-  --bg: #f6f7fb;
+  --bg: #f4faff;
   --card: #ffffff;
-  --text: #111827;
-  --muted: #6b7280;
+  --text: #0f172a;
+  --muted: #64748b;
 
-  --todo: #eef2ff;
-  --progress: #ecfeff;
-  --done: #f0fdf4;
+  --todo: #e0f2fe;      /* baby blue */
+  --progress: #ecfeff;  /* icy mint */
+  --done: #ecfdf5;      /* soft mint */
 
-  --shadow: 0 10px 25px rgba(0,0,0,0.08);
+  --accent: #38bdf8;    /* blue accent */
+  --accent-soft: #99f6e4;
+
+  --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
   --radius: 18px;
 }
+
 
 * { box-sizing: border-box; }
 
@@ -72,10 +76,12 @@ button:active {
 }
 
 button.primary {
-  background: #111827;
-  color: white;
-  border-color: #111827;
+  background: linear-gradient(135deg, #38bdf8, #99f6e4);
+  color: #0f172a;
+  border: none;
+  font-weight: 600;
 }
+
 
 .board {
   display: grid;

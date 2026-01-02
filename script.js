@@ -63,8 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
       doneList.appendChild(li);
       updateCounts();
     });
-    
+
     deleteBtn.addEventListener("click", () => {
+      const ok = confirm("Are you sure you want to delete this task?");
+      if (!ok) return;
+      
       li.remove();
       updateCounts();
     });

@@ -9,6 +9,7 @@ function createTaskElement(taskText) {
   const li = document.createElement("li");
 
   const title = document.createElement("div");
+  title.className = "task-title";
   title.textContent = taskText;
 
   const actions = document.createElement("div");

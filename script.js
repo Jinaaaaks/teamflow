@@ -6,6 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const progressList = document.getElementById("progressList");
   const doneList = document.getElementById("doneList");
 
+  const todoCount = document.getElementById("todoCount");
+  const progressCount = document.getElementById("progressCount");
+  const doneCount = document.getElementById("doneCount");
+
+  function updateCounts() {
+    todoCount.textContent = todoList.children.length;
+    progressCount.textContent = progressList.children.length;
+    doneCount.textContent = doneList.children.length;
+  }
+
   // Quick safety checks. If any is null, IDs do not match.
   if (!taskInput || !addTaskBtn || !todoList || !progressList || !doneList) {
     console.error("Missing element. Check your HTML IDs:", {
@@ -42,10 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     toProgressBtn.addEventListener("click", () => {
       progressList.appendChild(li);
+      updateCounts();
     });
 
     toDoneBtn.addEventListener("click", () => {
       doneList.appendChild(li);
+      updateCounts();
     });
 
     return li;
@@ -61,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const taskEl = createTaskElement(taskText);
     todoList.appendChild(taskEl);
+    updateCounts
 
     taskInput.value = "";
     taskInput.focus();
